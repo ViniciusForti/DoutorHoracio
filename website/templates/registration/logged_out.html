@@ -30,18 +30,29 @@
             
             <!-- Menu -->
             <ul>
-                <b><li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#quemSomos">Quem Somos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <b><li><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'index' %}">Sobre</a></li>
+                <li><a href="{% url 'index' %}">Quem Somos</a></li>
+                <li><a href="{% url 'index' %}">Contato</a></li>
                 <li><a href="{% url 'login' %}">Login</a></li></b>
             </ul>
         </section>
 
 <!-------------------------------------------------------------------------------------------------------->
 
-    <p>Logged out!</p>
-    <a href="{% url 'login'%}">Click here to login again.</a>
+        <section id="login">
+            <div class="container">
+                <div class="row">
+                    <div class="col loginFundo">
+                        <div class="login">
+                            <h1>Você saiu!</h1>
+                            <br>
+                            <a href="{% url 'login'%}">Clique aqui para fazer login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 <!-------------------------------------------------------------------------------------------------------->
 

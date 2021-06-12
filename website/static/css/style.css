@@ -192,29 +192,36 @@ body{
 
 /*-- Contato --*/
 
-.contatoFundo{
+.contato{
+    width: 100px;
+    border-radius: 10px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin: 13px;
     border-radius: 10px;
     background-color: rgba(241, 241, 241, 0.863);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contato{
-    width: 100px;
-    margin: 13px;
-    border-radius: 10px;
-    float: left;
-    text-align: center;
 }
 
 .saveButton{
+    margin-top: 10px;
     padding: 10px;
     color: #FFF;
     border-radius: 15px;
     border: none;
     background-color: #2E6CA4;
+}
+
+.saveButton2{
+    margin-top: 10px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: none;
+    background-color: #003563;
 }
 
 /*-- Footer --*/
@@ -261,16 +268,34 @@ body{
 
 .usuario{
     background-image: linear-gradient(to right, #5aacc0, #52cde9);
-    height: 450px;
+    max-height: 800px;
     margin: 13px;
     border-radius: 10px;
 }
 
 .usuario h1{
-    font-size: 100px;
+    font-size: 54px;
+    margin-left: 15px;
 }
 
+.usuario h5{
+    font-size: 26px;
+    margin-left: 15px;
+}
 
+.usuario h6:first-child{
+    margin-top: 15px;
+}
+
+.usuario h6{
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+.usuario button{
+    margin: 15px;
+    margin-top: 40px;
+}
 
 
 
@@ -307,4 +332,30 @@ body{
     border: none;
     background-color: #2E6CA4;
     margin-top: 20px;
+}
+
+/* Reset de Senha */
+
+.resetFundo{
+    margin: 13px;
+    border-radius: 10px;
+    background-color: rgba(241, 241, 241, 0.863);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+.reset{
+    width: 300px;
+    margin: 13px;
+    border-radius: 10px;
+    float: left;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.reset p{
+    font-size: 20px;
 }

@@ -36,7 +36,7 @@
                 <li><a href="#contato">Contato</a></li>
 
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'login' %}">{{ user.get_username }}</a></li></b>
+                    <li><a href="{% url 'usuario' %}">{{ user.get_short_name }}</a></li></b>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                     <li><a href="{% url 'login' %}">Login</a></li></b>
@@ -123,15 +123,21 @@
         <section id="contato">
             <div class="container">
                 <div class="row">
-                    <div class="col contatoFundo">
-                        <div class="contato">
+                    <div class="col contato">
                             <h1>Contato</h1>
                             <form method="POST" class="contatoForm">
                                 {% csrf_token %}
-                                {{ form.as_p }}
+
+                                {{ form.email.label_tag }}
+                                <br>
+                                {{ form.email }}
+                                <br>
+                                {{ form.texto.label_tag }}
+                                <br>
+                                {{ form.texto }}
+                                <br>
                                 <button type="submit" class="saveButton">Enviar</button>
                             </form>
-                        </div>
                     </div>
                 </div>
             </div>
