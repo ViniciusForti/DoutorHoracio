@@ -9,7 +9,6 @@ from .models import Contato
 from .forms import ContatoForm
 from django.contrib.auth import logout
 from django.contrib.auth.forms import *
-from chatbot import *
 import json
 from django.views import View
 from django.contrib.auth import update_session_auth_hash

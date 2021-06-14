@@ -1,4 +1,4 @@
-'''
+
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
@@ -35,21 +35,24 @@ conversation = [
     "Que pena! Uma dor nos braços pode ter várias possíveis causas, como:"
 
     #Febre
-
+    "Estou com dor nos braços"
+    "Que pena! Uma dor nos braços pode ter várias possíveis causas, como:"
 
     #Tosse
-
+    "Estou com dor nos braços"
+    "Que pena! Uma dor nos braços pode ter várias possíveis causas, como:"
 
     #Dor de Gargante
-
+    "Estou com dor nos braços"
+    "Que pena! Uma dor nos braços pode ter várias possíveis causas, como:"
 
     #Dor de Ouvido
-
+    "Estou com dor nos braços"
+    "Que pena! Uma dor nos braços pode ter várias possíveis causas, como:"
 
     #Dor no Corpo
-
-
-    #
+    "Estou com dor nos braços"
+    "Que pena! Uma dor nos braços pode ter várias possíveis causas, como:"
     
 ]
 
@@ -58,4 +61,3 @@ print(response)
 
 trainer = ListTrainer(chatbot)
 trainer.train(conversation)
-'''
