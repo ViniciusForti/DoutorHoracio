@@ -62,6 +62,8 @@ def usuario(request):
 
     return render(request, 'website/usuario.html',{'form_senha': form_senha})
 
+# -------------------------------- CHATTERBOT -------------------------------------------------------------------
+
 class ChatterBotApiView(View):
     """
     Provide an API endpoint to interact with ChatterBot.
