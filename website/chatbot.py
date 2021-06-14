@@ -4,9 +4,7 @@ from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
 # Creating ChatBot Instance
-chatbot = ChatBot(
-    'Dr. Horácio'
-    )
+chatbot = ChatBot('Dr. Horácio')
 
  # Training with Personal Ques & Ans 
 conversation = [
