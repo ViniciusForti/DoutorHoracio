@@ -2,11 +2,18 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
+from django.http import JsonResponse
 from django.core.paginator import Paginator
 from .models import Contato
 from .forms import ContatoForm
 from django.contrib.auth import logout
-
+from django.contrib.auth.forms import *
+from chatbot import *
+import json
+from django.views import View
+from django.contrib.auth import update_session_auth_hash
+from django.conf import settings
 # Create your views here.
 
 def index(request):
@@ -35,7 +42,7 @@ def password_reset_form(request):
 def cadastrar_usuario(request):
     if request.method == "POST":
         form_usuario = UserCreationForm(request.POST)
-        if form_contato.is_valid():
+        if form_usuario.is_valid():
             form_usuario.save()
             return redirect('index')
     else:
