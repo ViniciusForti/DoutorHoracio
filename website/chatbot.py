@@ -1,3 +1,4 @@
+'''
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
@@ -14,12 +15,41 @@ conversation = [
     "Olá, eu sou o Dr. Horácio, como você está?\nO que você está sentindo hoje?"
     "Oi"
     "Oi, eu sou o Dr. Horácio, tudo bem?\nO que você está sentindo hoje?"
+    "Obrigado!"
+    "Disponha! Posso te auxiliar em algo mais hoje?"
 
     #Dor de cabeça
     "Estou com dor de cabeça"
     "Que pena! Uma dor de cabeça pode ter várias possíveis causas, como:\n- Estresse;\n- Desidratação;\n- Anemia;\n- Doença Crônica;\n- Problemas hormonais;\n- Mudanças de Rotina\nou até mesmo um Tumor Cerebral, mas esses casos extremamente raros.\n\nA dor de cabeça pode ser causada por fontes simples que podemos resolver facilmente, porém podem ser causadas por fatores graves. Se você está sentindo dores de cabeça frequentemente procure um NEUROLOGISTA de sua confiança para investigar o caso!"
 
     #Dor nas costas
+    "Estou com dor nas costas"
+    "Que pena! Uma dor nas costas pode ter várias possíveis causas, como:"
+
+    #Dor nas pernas
+    "Estou com dor nas pernas"
+    "Que pena! Uma dor nas pernas pode ter várias possíveis causas, como:"
+
+    #Dor nos braços
+    "Estou com dor nos braços"
+    "Que pena! Uma dor nos braços pode ter várias possíveis causas, como:"
+
+    #Febre
+
+
+    #Tosse
+
+
+    #Dor de Gargante
+
+
+    #Dor de Ouvido
+
+
+    #Dor no Corpo
+
+
+    #
     
 ]
 
@@ -28,3 +58,4 @@ print(response)
 
 trainer = ListTrainer(chatbot)
 trainer.train(conversation)
+'''

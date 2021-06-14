@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website'
-    'chatterbot.ext.django_chatterbot',
+    #'chatterbot.ext.django_chatterbot',
 ]
 
 MIDDLEWARE = [
@@ -136,11 +136,15 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "portaldrhoracio@gmail.com"
 EMAIL_HOST_PASSWORD = "drhoracio123"
 
+'''
+
 CHATTERBOT = {
-    'name': 'Tech Support Bot',
+    'name': 'Dr. Horácio',
     'logic_adapters': [
         'chatterbot.logic.MathematicalEvaluation',
         'chatterbot.logic.TimeLogicAdapter',
         'chatterbot.logic.BestMatch'
     ]
 }
+
+'''
