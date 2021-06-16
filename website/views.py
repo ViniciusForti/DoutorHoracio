@@ -13,6 +13,8 @@ import json
 from django.views import View
 from django.contrib.auth import update_session_auth_hash
 from django.conf import settings
+from chatterbot import ChatBot
+
 # Create your views here.
 
 def index(request):
@@ -24,7 +26,7 @@ def index(request):
 
 def logoutView(request):
     logout(request)
-    return HttpResponseRedirect('registration/logged_out.html')
+    return HttpResponse('registration/logged_out.html')
 
 def password_reset_complete(request):
     return render(request, 'registration/password_reset_complete.html')
@@ -62,7 +64,7 @@ def usuario(request):
     return render(request, 'website/usuario.html',{'form_senha': form_senha})
 
 # -------------------------------- CHATTERBOT -------------------------------------------------------------------
-'''
+
 class ChatterBotApiView(View):
     """
     Provide an API endpoint to interact with ChatterBot.
@@ -97,4 +99,4 @@ class ChatterBotApiView(View):
         """
         return JsonResponse({
             'name': self.chatterbot.name
-        })'''
+        })

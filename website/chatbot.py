@@ -1,4 +1,3 @@
-
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
@@ -22,7 +21,7 @@ conversation = [
 
     #Dor nas costas
     "Estou com dor nas costas"
-    "Que pena! Uma dor nas costas pode ter várias possíveis causas, como:"
+    "Que pena! Uma dor nas costas pode ter várias possíveis causas, como:\n- Lesão Muscular\n- Doenças Respiratórias\n- Pedra nos Rins\n- Dor Ciática\n- Infarto\n- Hérnia de Disco \n- Contratura Muscular\nem mulheres pode ser até mesmo Gravidez.\n\nA dor nas costas pode ser causada por fontes simples que podemos resolver facilmente, porém pode ser causada por fatores graves. Se você está sentindo dores nas costas frequentemente procure um CLÍNICO GERAL de sua confiança para investigar o caso!"
 
     #Dor nas pernas
     "Estou com dor nas pernas"

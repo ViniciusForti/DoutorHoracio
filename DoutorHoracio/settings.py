@@ -136,7 +136,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "portaldrhoracio@gmail.com"
 EMAIL_HOST_PASSWORD = "drhoracio123"
 
-'''
+
 
 CHATTERBOT = {
     'name': 'Dr. Horácio',
@@ -147,4 +147,3 @@ CHATTERBOT = {
     ]
 }
 
-'''
