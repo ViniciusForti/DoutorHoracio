@@ -49,21 +49,8 @@
                     <h1>Cadastro</h1>
                     <form method="POST" class="contatoForm">
                         {% csrf_token %}
-                    
-                            {{form.username.label_tag}}
-                            <br>
-                            {{form.username}}
-                            <br>
-                            {{form.password1.label_tag}}
-                            <br>
-                            {{form.password1}}
-                            <br>
-                            {{form.password2.label_tag}}
-                            <br>
-                            {{form.password2}}
-                            <br>
-                            <br>
-                            <button type="submit" class="saveButton">Enviar</button>
+                        {{ form.as_p }}
+                            <a href="{% url 'login' %}"><button type="submit" class="saveButton">Enviar</button></a>
                         </div>
                     </form>
             </div>

@@ -51,14 +51,14 @@
                     <div class="col usuario">
                         {% csrf_token %}
                             <h6>Nome Completo</h6>
-                            <h1>{{ user.full_name }}</h1>
+                            <h1>{{ user.get_full_name }}</h1>
                             <h6>Usuário</h6>
                             <h5>{{ user.get_username }}</h5>
                             <h6>E-mail</h6>
                             <h5>{{ user.email }}</h5>
                             <h6>Último Login</h6>
                             <h5>{{ user.last_login }}</h5>
-                            <button type="button" onclick="" class="saveButton">Excluir Usuário</button>
+                            <a href="{% url 'password_reset' %}"><button type="submit" class="saveButton2">Alterar Senha</button></a>
                     </div>
                 </div>
             </div>

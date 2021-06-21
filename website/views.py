@@ -2,6 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator
 from .forms import ContatoForm
 from django.contrib.auth import logout
@@ -37,7 +38,7 @@ def password_reset_done(request):
 def password_reset_form(request):
     return render(request, 'registration/password_reset_form.html')
 
-def cadastrar_usuario(request):
+def cadastro(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -45,7 +46,7 @@ def cadastrar_usuario(request):
             return redirect('index')
     else:
         form = UserCreationForm()
-    return render(request, 'website/cadastrar_usuario.html', {'form': form})
+    return render(request, 'website/cadastro.html', {'form': form})
 
 @login_required
 def usuario(request):
@@ -59,6 +60,7 @@ def usuario(request):
         form_senha = PasswordChangeForm(request.user)
 
     return render(request, 'website/usuario.html',{'form_senha': form_senha})
+
 
 # -------------------------------- CHATTERBOT -------------------------------------------------------------------
 '''
