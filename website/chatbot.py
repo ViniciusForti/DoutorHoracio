@@ -1,4 +1,4 @@
-from chatterbot import ChatBot
+'''from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
@@ -57,4 +57,4 @@ response = chatbot.get_response("Olá! Eu queria uma ajuda com meu(s) sintoma(s)
 print(response)
 
 trainer = ListTrainer(chatbot)
-trainer.train(conversation)
+trainer.train(conversation)'''
