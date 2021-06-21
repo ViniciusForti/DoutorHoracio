@@ -137,14 +137,13 @@ EMAIL_HOST_USER = "portaldrhoracio@gmail.com"
 EMAIL_HOST_PASSWORD = "drhoracio123"
 
 
-'''
-CHATTERBOT = {
-    'name': 'Dr. Horácio',
-    'logic_adapters': [
-        'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter',
-        'chatterbot.logic.BestMatch'
-    ]
-}
 
-'''
+#CHATTERBOT = {
+#    'name': 'Dr. Horácio',
+#    'logic_adapters': [
+#        'chatterbot.logic.MathematicalEvaluation',
+#        'chatterbot.logic.TimeLogicAdapter',
+#        'chatterbot.logic.BestMatch'
+#    ]
+#}
+
