@@ -1,1 +1,1 @@
-web: gunicorn DoutorHoracio.wsgi
+web: gunicorn DoutorHoracio.wsgi:website --log-file -
