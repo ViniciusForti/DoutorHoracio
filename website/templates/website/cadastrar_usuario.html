@@ -41,31 +41,35 @@
 
 <!-------------------------------------------------------------------------------------------------------->
 
-<form method="post">
-    {% csrf_token %}
 
-    <div class="form-group">
-        {{form_usuario.username.errors}}
-        <label>Username: </label>
-        {{form_usuario.username}}
+<section id="contato">
+    <div class="container">
+        <div class="row">
+            <div class="col contato">
+                    <h1>Cadastro</h1>
+                    <form method="POST" class="contatoForm">
+                        {% csrf_token %}
+                    
+                            {{form.username.label_tag}}
+                            <br>
+                            {{form.username}}
+                            <br>
+                            {{form.password1.label_tag}}
+                            <br>
+                            {{form.password1}}
+                            <br>
+                            {{form.password2.label_tag}}
+                            <br>
+                            {{form.password2}}
+                            <br>
+                            <br>
+                            <button type="submit" class="saveButton">Enviar</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
     </div>
-
-    <div class="form-group">
-        {{form_usuario.password1.errors}}
-        <label>Senha: </label>
-        {{form_usuario.password1}}
-    </div>
-
-    <div class="form-group">
-        {{form_usuario.password2.errors}}
-        <label>Confirmação de senha: </label>
-        {{form_usuario.password2}}
-    </div>
-
-    <div class="form-group">
-        <input type="submit" value="Cadastrar" class="btn btn-primary">
-    </div>
-</form>
+</section>
 
 <!-------------------------------------------------------------------------------------------------------->
 

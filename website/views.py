@@ -1,11 +1,8 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
 from django.http import HttpResponse
-from django.http import JsonResponse
 from django.core.paginator import Paginator
-from .models import Contato
 from .forms import ContatoForm
 from django.contrib.auth import logout
 from django.contrib.auth.forms import *
@@ -26,7 +23,7 @@ def index(request):
 
 def logoutView(request):
     logout(request)
-    return HttpResponse('registration/logged_out.html')
+    return render(request, 'registration/logout.html')
 
 def password_reset_complete(request):
     return render(request, 'registration/password_reset_complete.html')
@@ -42,13 +39,13 @@ def password_reset_form(request):
 
 def cadastrar_usuario(request):
     if request.method == "POST":
-        form_usuario = UserCreationForm(request.POST)
-        if form_usuario.is_valid():
-            form_usuario.save()
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
             return redirect('index')
     else:
-        form_usuario = UserCreationForm()
-    return render(request, 'cadastro.html', {'form_usuario': form_usuario})
+        form = UserCreationForm()
+    return render(request, 'website/cadastrar_usuario.html', {'form': form})
 
 @login_required
 def usuario(request):
