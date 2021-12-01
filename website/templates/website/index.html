@@ -34,13 +34,6 @@
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#quemSomos">Quem Somos</a></li>
                 <li><a href="#contato">Contato</a></li>
-
-                {% if user.is_authenticated %}
-                    <li><a href="{% url 'usuario' %}">{{ user.get_username }}</a></li></b>
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
-                {% else %}
-                    <li><a href="{% url 'login' %}">Login</a></li></b>
-                {% endif %} 
             </ul>
         </section>
 
@@ -54,7 +47,7 @@
                         <div id="título">
                             <b><p>QUER SABER MAIS</p>
                             <p>SOBRE O </b><b id="nomeTitulo">DR. HORÁCIO</b><b>?</b></p>
-                            <a href="#doutorHoracio"><button>Fale com Dr. Horácio!</button></a>
+                            <!--<a href="#doutorHoracio"><button>Fale com Dr. Horácio!</button></a>-->
                         </div>
                     </div>
                 </div>
@@ -94,6 +87,7 @@
                         <img src="{% static 'img/RemediosMedico.jpg' %}">
                         <div id="sobreTexto">
                             <h1>Sobre</h1>
+                            <br>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor augue sed metus congue hendrerit. Proin laoreet magna quis velit dapibus hendrerit. Praesent aliquam sit amet leo ac egestas. Suspendisse eu dapibus quam, nec consectetur tortor. In consectetur scelerisque nunc ac tempor. Nunc non neque in augue tincidunt luctus. Ut convallis dictum mi, ut scelerisque arcu fermentum sed. Ut eu felis sed nibh venenatis consequat eget at nunc. Cras volutpat justo sed est finibus faucibus. Morbi a tellus odio. Quisque felis dui, faucibus ac pellentesque malesuada, facilisis vitae tortor. Sed accumsan tristique magna, et vulputate nisl aliquam maximus. Proin et feugiat risus, nec vestibulum massa. Nunc consectetur, lectus consectetur sodales commodo, lorem velit rhoncus augue, eu tempor ex dolor nec tellus. Morbi at libero gravida, efficitur quam sit amet, porttitor erat.
                             </p>
@@ -110,8 +104,9 @@
                     <div class="col quemSomos">
                         <div id="quemSomosTexto">
                             <h1>Quem Somos</h1>
+                            <br>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor augue sed metus congue hendrerit. Proin laoreet magna quis velit dapibus hendrerit. Praesent aliquam sit amet leo ac egestas. Suspendisse eu dapibus quam, nec consectetur tortor. In consectetur scelerisque nunc ac tempor. Nunc non neque in augue tincidunt luctus. Ut convallis dictum mi, ut scelerisque arcu fermentum sed. Ut eu felis sed nibh venenatis consequat eget at nunc. Cras volutpat justo sed est finibus faucibus. Morbi a tellus odio. Quisque felis dui, faucibus ac pellentesque malesuada, facilisis vitae tortor. Sed accumsan tristique magna, et vulputate nisl aliquam maximus. Proin et feugiat risus, nec vestibulum massa. Nunc consectetur, lectus consectetur sodales commodo, lorem velit rhoncus augue, eu tempor ex dolor nec tellus. Morbi at libero gravida, efficitur quam sit amet, porttitor erat.
+                                O Doutor Horácio é um ChatBot criado por estudantes do curso de Análise e Desenvolvimento de Sistemas (ADS) do Instituto Federal de Educação, Ciência e Tecnologia do Estado de São Paulo, no campus de Bragança Paulista. O portal foi criado com a intenção de conscientizar sobre os problemas da automedicação, além de ajudar seus usuários a saberem quais especialidades médicas devem ser procuradas para seus sintomas.
                             </p>
                         </div>
                         <img src="{% static 'img/RemedioMesa.jpg' %}">
@@ -132,6 +127,7 @@
                                 <br>
                                 {{ form.email }}
                                 <br>
+                                <br>
                                 {{ form.texto.label_tag }}
                                 <br>
                                 {{ form.texto }}
@@ -142,6 +138,8 @@
                 </div>
             </div>
         </section>
+
+        <script type="text/javascript">(function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", 32151);</script>
 
 <!-------------------------------------------------------------------------------------------------------->
 

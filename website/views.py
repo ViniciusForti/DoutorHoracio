@@ -11,7 +11,6 @@ import json
 from django.views import View
 from django.contrib.auth import update_session_auth_hash
 from django.conf import settings
-from chatterbot import ChatBot
 
 # Create your views here.
 
@@ -21,46 +20,6 @@ def index(request):
         form.save()
         return redirect("index")
     return render(request, 'website/index.html',{"form": form})
-
-def logoutView(request):
-    logout(request)
-    return render(request, 'registration/logout.html')
-
-def password_reset_complete(request):
-    return render(request, 'registration/password_reset_complete.html')
-    
-def password_reset_confirm(request):    
-    return render(request, 'registration/password_reset_confirm.html')
-
-def password_reset_done(request):
-    return render(request, 'registration/password_reset_done.html')
-
-def password_reset_form(request):
-    return render(request, 'registration/password_reset_form.html')
-
-def cadastro(request):
-    if request.method == "POST":
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('index')
-    else:
-        form = UserCreationForm()
-    return render(request, 'website/cadastro.html', {'form': form})
-
-@login_required
-def usuario(request):
-    if request.method == "POST":
-        form_senha = PasswordChangeForm(request.user, request.POST)
-        if form_senha.is_valid():
-            user = form_senha.save()
-            update_session_auth_hash(request, user)
-            return redirect('index')
-    else:
-        form_senha = PasswordChangeForm(request.user)
-
-    return render(request, 'website/usuario.html',{'form_senha': form_senha})
-
 
 # -------------------------------- CHATTERBOT -------------------------------------------------------------------
 '''

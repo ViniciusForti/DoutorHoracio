@@ -18,7 +18,7 @@ body{
 }
 
 #menu ul {
-    max-width: 1000px;
+    max-width: 500px;
     list-style: none;
     padding: 0;
 }
@@ -39,7 +39,7 @@ body{
 #menu ul li a:hover {
     background-color: rgb(223, 223, 223);
 }
-
+/*
 #menu ul li:last-child a{
     float: right;
     background-color: #2E6CA4;
@@ -50,7 +50,7 @@ body{
     float: right;
     background-color: #2e6da4be;
 }
-
+*/
 #menu img{
     width: 135px;
     float: left;
